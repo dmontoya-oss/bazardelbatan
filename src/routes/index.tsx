@@ -1,29 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { Marquee } from "@/components/site/Marquee";
+import { Categories } from "@/components/site/Categories";
+import { Events } from "@/components/site/Events";
+import { Gallery } from "@/components/site/Gallery";
+import { Testimonials } from "@/components/site/Testimonials";
+import { Reserve } from "@/components/site/Reserve";
+import { Footer } from "@/components/site/Footer";
+import { WhatsApp } from "@/components/site/WhatsApp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "El Bazar del Batán | Feria mensual de emprendedores en Bogotá" },
+      {
+        name: "description",
+        content:
+          "Reserva tu stand en El Bazar del Batán, la feria mensual de Bogotá donde marcas locales conectan con cientos de personas en un ambiente cálido y moderno.",
+      },
+      { property: "og:title", content: "El Bazar del Batán" },
+      {
+        property: "og:description",
+        content: "Feria mensual de emprendedores en el barrio El Batán, Bogotá.",
+      },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="min-h-screen bg-cream text-cocoa overflow-x-hidden">
+      <Navbar />
+      <Hero />
+      <Marquee />
+      <Categories />
+      <Events />
+      <Reserve />
+      <Gallery />
+      <Testimonials />
+      <Footer />
+      <WhatsApp />
+    </main>
   );
 }
