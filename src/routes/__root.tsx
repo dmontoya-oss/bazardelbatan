@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Feria mensual en el barrio El Batán, Bogotá. Reserva tu stand y conecta con cientos de personas en un ambiente cálido, familiar y moderno.",
       },
       { name: "author", content: "El Bazar del Batán" },
-      { property: "og:title", content: "El Bazar del Batán" },
+      { property: "og:title", content: "El Bazar del Batán | Feria mensual de emprendedores en Bogotá" },
       {
         property: "og:description",
         content:
@@ -87,6 +87,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "es_CO" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "El Bazar del Batán | Feria mensual de emprendedores en Bogotá" },
+      { name: "description", content: "El Bazar Vibes is a modern, vibrant web platform for a monthly artisan market in Bogotá, Colombia." },
+      { property: "og:description", content: "El Bazar Vibes is a modern, vibrant web platform for a monthly artisan market in Bogotá, Colombia." },
+      { name: "twitter:description", content: "El Bazar Vibes is a modern, vibrant web platform for a monthly artisan market in Bogotá, Colombia." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/fNhBu4gMGohUSRMam0ueBST4e1S2/social-images/social-1779893527614-IMG_4074.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/fNhBu4gMGohUSRMam0ueBST4e1S2/social-images/social-1779893527614-IMG_4074.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
