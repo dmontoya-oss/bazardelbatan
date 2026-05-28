@@ -21,7 +21,7 @@ export function Gallery() {
               Así se vive nuestra feria
             </h2>
             <p className="mt-4 text-cocoa-soft">
-              Feed en vivo desde nuestro Instagram oficial. Síguenos para no perderte ninguna edición.
+              Síguenos para no perderte ninguna edición.
             </p>
           </div>
 
