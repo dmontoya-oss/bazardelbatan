@@ -3,11 +3,10 @@ import { Instagram, ExternalLink } from "lucide-react";
 const IG_USER = "elbazar____";
 const IG_URL = `https://www.instagram.com/${IG_USER}/`;
 
-// Feed automático de Instagram vía LightWidget (sin Meta Developers).
-// Para personalizarlo: crea un widget gratis en https://lightwidget.com,
-// conecta @elbazar____ y reemplaza WIDGET_ID por el id que te entreguen.
-const LIGHTWIDGET_ID = "your_widget_id";
-const LIGHTWIDGET_SRC = `https://cdn.lightwidget.com/widgets/${LIGHTWIDGET_ID}.html`;
+// Feed automático sin APIs ni tokens.
+// Usamos InstaWidget (https://instawidget.net) que solo requiere el username
+// del perfil público de Instagram en la URL del iframe.
+const INSTAWIDGET_SRC = `https://instawidget.net/v/user/${IG_USER}?limit=9`;
 
 export function Gallery() {
   return (
@@ -39,12 +38,13 @@ export function Gallery() {
 
         <div className="rounded-3xl overflow-hidden border border-cocoa/10 bg-bone/50 p-2 sm:p-3">
           <iframe
-            src={LIGHTWIDGET_SRC}
+            src={INSTAWIDGET_SRC}
             title={`Instagram feed de @${IG_USER}`}
             scrolling="no"
             allowTransparency
-            className="lightwidget-widget w-full rounded-2xl border-0 overflow-hidden"
-            style={{ minHeight: 520 }}
+            className="w-full rounded-2xl border-0 overflow-hidden block"
+            style={{ minHeight: 620 }}
+            loading="lazy"
           />
         </div>
 
