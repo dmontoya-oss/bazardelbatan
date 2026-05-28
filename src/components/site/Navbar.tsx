@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo-bazar.png";
 
 const links = [
   { label: "Categorías", href: "#categorias" },
@@ -15,9 +16,11 @@ export function Navbar() {
     <header className="sticky top-0 z-40 backdrop-blur-md bg-cream/70 border-b border-cocoa/5">
       <div className="mx-auto max-w-7xl px-5 lg:px-10 h-16 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2 group">
-          <span className="h-9 w-9 rounded-full bg-lilac grid place-items-center text-cocoa font-display font-bold text-lg shadow-sm group-hover:rotate-[-6deg] transition-transform">
-            B
-          </span>
+          <img
+            src={logo}
+            alt="El Bazar del Batán"
+            className="h-11 w-11 rounded-full object-cover shadow-sm group-hover:rotate-[-6deg] transition-transform"
+          />
           <div className="leading-none">
             <p className="font-display text-[15px] font-bold text-cocoa">El Bazar</p>
             <p className="font-display text-[11px] text-cocoa-soft tracking-widest uppercase">

@@ -1,4 +1,5 @@
 import { Instagram, MapPin, Mail } from "lucide-react";
+import logo from "@/assets/logo-bazar.png";
 
 export function Footer() {
   return (
@@ -6,9 +7,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 lg:px-10 py-16 grid md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
-            <span className="h-10 w-10 rounded-full bg-lilac grid place-items-center text-cocoa font-display font-bold">
-              B
-            </span>
+            <img src={logo} alt="El Bazar del Batán" className="h-12 w-12 rounded-full object-cover" />
             <div className="leading-none">
               <p className="font-display text-lg font-bold">El Bazar del Batán</p>
               <p className="text-xs text-bone/60 uppercase tracking-widest">
@@ -21,7 +20,7 @@ export function Footer() {
             en un ambiente cálido, familiar y moderno.
           </p>
           <div className="mt-6 flex gap-3">
-            <a href="#" className="h-10 w-10 rounded-full bg-bone/10 grid place-items-center hover:bg-tangerine hover:text-cocoa transition-colors" aria-label="Instagram">
+            <a href="https://www.instagram.com/elbazar____/" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-bone/10 grid place-items-center hover:bg-tangerine hover:text-cocoa transition-colors" aria-label="Instagram">
               <Instagram size={16} />
             </a>
             <a href="#" className="h-10 w-10 rounded-full bg-bone/10 grid place-items-center hover:bg-tangerine hover:text-cocoa transition-colors" aria-label="Mail">
