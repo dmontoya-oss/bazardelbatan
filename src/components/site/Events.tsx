@@ -7,10 +7,10 @@ const events: {
   title: string; address: string; time: string;
   price: string; left: number; total: number; status: Status;
 }[] = [
-  { date: "16", month: "Ene", weekday: "Sábado", title: "Bazar de Año Nuevo", address: "Parque El Batán, Bogotá", time: "10:00 - 19:00", price: "$180.000", left: 23, total: 120, status: "Disponible" },
+  { date: "16", month: "Ene", weekday: "Sábado", title: "Bazar de Año Nuevo", address: "Parque El Batán, Bogotá", time: "10:00 - 19:00", price: "$200.000", left: 23, total: 120, status: "Disponible" },
   { date: "20", month: "Feb", weekday: "Sábado", title: "Bazar de Enamorados", address: "Parque El Batán, Bogotá", time: "10:00 - 19:00", price: "$200.000", left: 7, total: 120, status: "Últimos cupos" },
   { date: "19", month: "Mar", weekday: "Sábado", title: "Bazar de Otoño Andino", address: "Parque El Batán, Bogotá", time: "10:00 - 19:00", price: "$200.000", left: 0, total: 120, status: "Agotado" },
-  { date: "16", month: "Abr", weekday: "Sábado", title: "Bazar de Primavera", address: "Parque El Batán, Bogotá", time: "10:00 - 19:00", price: "$210.000", left: 64, total: 120, status: "Disponible" },
+  { date: "16", month: "Abr", weekday: "Sábado", title: "Bazar de Primavera", address: "Parque El Batán, Bogotá", time: "10:00 - 19:00", price: "$200.000", left: 64, total: 120, status: "Disponible" },
 ];
 
 const statusStyles: Record<Status, string> = {

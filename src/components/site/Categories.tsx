@@ -36,12 +36,10 @@ export function Categories() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
-          {categories.map((c, idx) => (
+          {categories.map((c) => (
             <article
               key={c.name}
-              className={`group relative ${c.bg} rounded-3xl p-5 sm:p-6 border border-cocoa/5 ring-1 ${c.ring} hover:-translate-y-1.5 transition-all duration-300 cursor-pointer overflow-hidden ${
-                idx === 0 ? "md:col-span-2 md:row-span-1" : ""
-              }`}
+              className={`group relative ${c.bg} rounded-3xl p-5 sm:p-6 border border-cocoa/5 ring-1 ${c.ring} hover:-translate-y-1.5 transition-all duration-300 cursor-pointer overflow-hidden`}
             >
               <div className="aspect-square w-full grid place-items-center">
                 <img

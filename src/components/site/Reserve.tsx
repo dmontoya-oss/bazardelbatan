@@ -2,9 +2,8 @@ import { useState } from "react";
 import { Check, Upload } from "lucide-react";
 
 const sizes = [
-  { id: "s", name: "Stand S", area: "2x2 m", price: "$180.000", perks: ["1 mesa", "2 sillas", "Conexión eléctrica"] },
-  { id: "m", name: "Stand M", area: "3x2 m", price: "$240.000", perks: ["2 mesas", "2 sillas", "Conexión eléctrica", "Mención en redes"], popular: true },
-  { id: "l", name: "Stand L", area: "3x3 m", price: "$320.000", perks: ["3 mesas", "4 sillas", "Conexión eléctrica", "Esquinero premium"] },
+  { id: "m", name: "Stand M", area: "1 mesa", price: "$200.000", perks: ["1 mesa", "2 sillas", "Conexión eléctrica"], popular: true },
+  { id: "l", name: "Stand L", area: "Doble mesa", price: "$320.000", perks: ["2 mesas", "2 sillas", "Conexión eléctrica"] },
 ];
 
 const steps = ["Evento", "Tamaño", "Datos", "Material", "Pago"];
@@ -50,7 +49,7 @@ export function Reserve() {
 
         <div className="grid lg:grid-cols-3 gap-6">
           {/* Sizes */}
-          <div className="lg:col-span-2 grid sm:grid-cols-3 gap-4">
+          <div className="lg:col-span-2 grid sm:grid-cols-2 gap-4">
             {sizes.map((s) => {
               const selected = size === s.id;
               return (
