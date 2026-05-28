@@ -42,7 +42,12 @@ export function Footer() {
         <div>
           <p className="text-xs uppercase tracking-widest text-butter mb-3">Ubicación</p>
           <p className="text-sm text-bone/80 flex items-start gap-2">
-            <MapPin size={14} className="mt-0.5"/> Carrera 50 # 122-19 Esquina Morada<br/>Bogotá, Colombia
+            <MapPin size={14} className="mt-0.5"/>
+            <span>
+              Carrera 50 # 122-19<br />
+              💜 Esquina Morada<br />
+              Bogotá, Colombia
+            </span>
           </p>
           <p className="text-xs text-bone/50 mt-4">
             © {new Date().getFullYear()} El Bazar del Batán
