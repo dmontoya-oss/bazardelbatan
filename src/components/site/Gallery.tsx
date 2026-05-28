@@ -1,24 +1,13 @@
-import { Instagram, ExternalLink, Heart, MessageCircle } from "lucide-react";
-import g1 from "@/assets/gal-1.jpg";
-import g2 from "@/assets/gal-2.jpg";
-import g3 from "@/assets/gal-3.jpg";
-import g4 from "@/assets/gal-4.jpg";
-import g5 from "@/assets/gal-5.jpg";
-import g6 from "@/assets/gal-6.jpg";
+import { Instagram, ExternalLink } from "lucide-react";
 
 const IG_USER = "elbazar____";
 const IG_URL = `https://www.instagram.com/${IG_USER}/`;
 
-// Mientras se conecta la Instagram Graph API, mostramos posts curados
-// que enlazan directamente al perfil oficial.
-const posts = [
-  { src: g1, alt: "Stand de cerámica artesanal", likes: 342, comments: 18 },
-  { src: g2, alt: "Pastelería y café del bazar", likes: 521, comments: 34 },
-  { src: g3, alt: "Visitantes disfrutando la feria", likes: 287, comments: 12 },
-  { src: g4, alt: "Accesorios y joyería hecha a mano", likes: 463, comments: 27 },
-  { src: g5, alt: "Plantas y decoración natural", likes: 198, comments: 9 },
-  { src: g6, alt: "Banderines y luces del bazar", likes: 612, comments: 41 },
-];
+// Feed automático de Instagram vía LightWidget (sin Meta Developers).
+// Para personalizarlo: crea un widget gratis en https://lightwidget.com,
+// conecta @elbazar____ y reemplaza WIDGET_ID por el id que te entreguen.
+const LIGHTWIDGET_ID = "your_widget_id";
+const LIGHTWIDGET_SRC = `https://cdn.lightwidget.com/widgets/${LIGHTWIDGET_ID}.html`;
 
 export function Gallery() {
   return (
@@ -33,7 +22,7 @@ export function Gallery() {
               Así se vive nuestra feria
             </h2>
             <p className="mt-4 text-cocoa-soft">
-              Síguenos en Instagram para ver el día a día del bazar, marcas invitadas y próximas fechas.
+              Feed en vivo desde nuestro Instagram oficial. Síguenos para no perderte ninguna edición.
             </p>
           </div>
 
@@ -48,42 +37,18 @@ export function Gallery() {
           </a>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
-          {posts.map((p, i) => (
-            <a
-              key={i}
-              href={IG_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative aspect-square overflow-hidden rounded-3xl border border-cocoa/10 block"
-              aria-label={`Ver publicación en Instagram: ${p.alt}`}
-            >
-              <img
-                src={p.src}
-                alt={p.alt}
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              {/* IG overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-cocoa/85 via-cocoa/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity grid place-items-center">
-                <div className="flex items-center gap-5 text-bone font-semibold">
-                  <span className="flex items-center gap-1.5">
-                    <Heart size={18} className="fill-bone" /> {p.likes}
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <MessageCircle size={18} className="fill-bone" /> {p.comments}
-                  </span>
-                </div>
-              </div>
-              {/* IG corner badge */}
-              <div className="absolute top-3 right-3 h-8 w-8 rounded-full bg-bone/90 backdrop-blur grid place-items-center text-cocoa opacity-0 group-hover:opacity-100 transition-opacity">
-                <Instagram size={14} />
-              </div>
-            </a>
-          ))}
+        <div className="rounded-3xl overflow-hidden border border-cocoa/10 bg-bone/50 p-2 sm:p-3">
+          <iframe
+            src={LIGHTWIDGET_SRC}
+            title={`Instagram feed de @${IG_USER}`}
+            scrolling="no"
+            allowTransparency
+            className="lightwidget-widget w-full rounded-2xl border-0 overflow-hidden"
+            style={{ minHeight: 520 }}
+          />
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-8 text-center">
           <a
             href={IG_URL}
             target="_blank"
