@@ -38,7 +38,7 @@ export function Hero() {
           </span>
 
           <h1 className="mt-5 font-display text-[44px] sm:text-6xl lg:text-7xl leading-[0.95] font-bold text-cocoa">
-            Haz crecer tu <em className="not-italic text-lilac">emprendimiento</em> en El Bazar del Batán
+            Haz crecer tu <em className="not-italic text-lilac">emprendimiento</em> en <em className="not-italic text-lilac">El Bazar del Batán</em>
           </h1>
 
           <p className="mt-6 text-lg text-cocoa-soft max-w-xl leading-relaxed">
