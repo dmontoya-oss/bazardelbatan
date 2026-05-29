@@ -93,7 +93,7 @@ export function Hero() {
 
         {/* Right: illustration */}
         <div className="lg:col-span-6 relative">
-          <div className="relative aspect-[5/4] w-full">
+          <div className="relative aspect-[1638/741] w-full">
             {/* blob bg */}
             <div className="absolute inset-0 -z-10">
               <div className="absolute top-6 right-6 w-72 h-72 rounded-[40%_60%_60%_40%/50%_40%_60%_50%] bg-lilac-soft blur-2xl opacity-70" />
@@ -103,8 +103,8 @@ export function Hero() {
             <img
               src={heroImg}
               alt="Ilustración de El Bazar del Batán: feria de barrio en Bogotá con emprendedores, gastronomía y decoración"
-              width={1536}
-              height={1152}
+              width={1638}
+              height={741}
               className="relative w-full h-full object-contain drop-shadow-xl"
             />
 
